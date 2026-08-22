@@ -1,6 +1,0 @@
-eth_rlp
-eth-rlp
-eth-rlp
-eth-rlp
-eth-rlp
-RLP definitions for common Ethereum objects in Python
