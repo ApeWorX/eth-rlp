@@ -4,6 +4,7 @@ from typing import (
     cast,
 )
 
+import rlp
 from eth_utils import (
     keccak,
 )
@@ -13,7 +14,6 @@ from eth_utils.toolz import (
 from hexbytes import (
     HexBytes,
 )
-import rlp
 
 if sys.version_info >= (3, 11):
     from typing import (
@@ -53,13 +53,13 @@ class HashableRLP(rlp.Serializable):  # type: ignore
 
         ::
 
-            my_obj = MyRLP(name1=1, name2=b'\xff')
+            my_obj = MyRLP(name1=1, name2=b"\xff")
 
         This method enables initialization with.
 
         ::
 
-            my_obj = MyRLP.from_dict({'name1': 1, 'name2': b'\xff'})
+            my_obj = MyRLP.from_dict({"name1": 1, "name2": b"\xff"})
 
         In general, the standard initialization is preferred, but
         some approaches might favor this API, like when using

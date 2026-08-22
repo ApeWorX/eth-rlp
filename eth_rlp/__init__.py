@@ -7,3 +7,6 @@ from .main import (
 )
 
 __version__ = __version("eth-rlp")
+__all__ = [
+    "HashableRLP",
+]

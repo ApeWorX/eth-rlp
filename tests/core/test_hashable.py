@@ -1,5 +1,4 @@
 import pytest
-
 from rlp.sedes import (
     big_endian_int,
 )
@@ -66,7 +65,7 @@ def test_from_bytes(serialized, expected_hash_hex, expected_fields):
 )
 def test_iteration(unserialized, expected_fields):
     rlp_obj = TwoIntRLP(**unserialized)
-    for actual, expected in zip(rlp_obj, expected_fields):
+    for actual, expected in zip(rlp_obj, expected_fields, strict=False):
         assert actual == expected
     assert list(rlp_obj) == expected_fields
 
